@@ -24,6 +24,8 @@ class Item
     case @item
     when "milk"
       discount_on_pair_of = 2
+
+      $total_price_pre_discount_for_all_items_combined += (@quantity * milk_unit_price)
     when "bread"
 
 
