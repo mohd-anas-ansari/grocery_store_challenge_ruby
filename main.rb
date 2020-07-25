@@ -87,6 +87,8 @@ def run_test
   if list_by_user.include? "banana"
     createItem "banana", list_by_user, bill
   end
+
+  generate_bill_in_format(bill)
 end
 
 
