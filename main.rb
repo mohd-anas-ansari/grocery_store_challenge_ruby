@@ -100,7 +100,7 @@ def run_test
 end
 
 
-
+# Table Generator
 def generate_bill_in_format bill
   data_for_table = []
   for item in bill do 
@@ -112,5 +112,27 @@ def generate_bill_in_format bill
   puts "\n"
   puts table
   puts "\n"
+
+  calculate_bill bill
 end
+
+
+$total_price_pre_discount_for_all_items_combined = 0
+
+#Total
+def calculate_bill bill
+  total_price = 0
+  bill.map do |n| 
+    total_price += n.price
+  end
+
+  puts  "Total price : $#{total_price.round(2)}"
+
+  amount_saved = ($total_price_pre_discount_for_all_items_combined - total_price).round(2)
+  puts "You saved $#{amount_saved} today." 
+  puts "\n"
+end
+
+
+run_test 
 
