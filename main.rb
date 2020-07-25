@@ -51,8 +51,12 @@ class Item
   end
 
   def generate_price_after_sale_discount discount_on_pair_of, sale_unit_price, unit_price
-
+    if @quantity < discount_on_pair_of
+      price_after_discount = @quantity * unit_price
+      return price_after_discount
+    end
   end
+  
 end
 
 
