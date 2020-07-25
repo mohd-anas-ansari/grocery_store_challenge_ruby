@@ -28,3 +28,10 @@ def createItem item, list, bill
   quantity = list.count(item)
   bill.push(Item.new(item , quantity))
 end
+
+
+# Item Class
+
+class Item
+  
+end
