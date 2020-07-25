@@ -1,4 +1,5 @@
 def run_test 
+  bill = []
   puts "Please enter all the items purchased separated by a comma"
   list_by_user = gets.chomp().gsub(/\s+/, "").split(",")
 
@@ -17,4 +18,9 @@ def run_test
   if list_by_user.include? "banana"
     createItem "banana", list_by_user, bill
   end
+end
+
+
+def createItem 
+
 end
