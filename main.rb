@@ -1,3 +1,70 @@
+# Item Class
+class Item
+  attr_accessor :item, :quantity, :price
+
+  def initialize (item, quantity)
+    @item = item
+    @quantity = quantity
+    @price = calculate_price
+  end
+
+  def calculate_price
+    milk_sale_unit_price = 2.50
+    milk_unit_price = 3.97
+
+    bread_sale_unit_price = 2.00
+    bread_unit_price = 2.17
+    
+    apple_unit_price = 0.89
+    
+    banana_unit_price = 0.99
+
+    discount_on_pair_of = 0
+
+    case @item
+    when "milk"
+      discount_on_pair_of = 2
+
+      $total_price_pre_discount_for_all_items_combined += (@quantity * milk_unit_price)
+
+      milk_price = generate_price_after_sale_discount(discount_on_pair_of, milk_sale_unit_price, milk_unit_price)
+      return milk_price
+
+    when "bread"
+      discount_on_pair_of = 3
+
+      $total_price_pre_discount_for_all_items_combined += (@quantity * bread_unit_price)
+
+      bread_price = generate_price_after_sale_discount(discount_on_pair_of, bread_sale_unit_price, bread_unit_price) 
+      return bread_price
+
+    when "apple"
+      $total_price_pre_discount_for_all_items_combined += (@quantity * apple_unit_price)
+
+      return apple_unit_price
+
+    when "banana"
+      $total_price_pre_discount_for_all_items_combined += (@quantity * banana_unit_price)
+
+      return banana_unit_price
+    end
+  end
+
+  def generate_price_after_sale_discount discount_on_pair_of, sale_unit_price, unit_price
+    if @quantity < discount_on_pair_of
+      price_after_discount = @quantity * unit_price
+      return price_after_discount
+    end
+
+    if @quantity >= discount_on_pair_of
+      price_after_discount = ((@quantity / discount_on_pair_of) * (sale_unit_price * discount_on_pair_of) ) + (unit_price * (@quantity % discount_on_pair_of))
+
+      return price_after_discount
+    end
+  end
+
+end
+
 
 # Main
 def run_test 
@@ -30,14 +97,3 @@ def createItem item, list, bill
 end
 
 
-# Item Class
-class Item
-  attr_accessor :item, :quantity, :price
-
-  def initialize (item, quantity)
-    @item = item
-    @quantity = quantity
-    @price = calculate_price
-  end
-
-end
