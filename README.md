@@ -1,2 +1,2 @@
 
-# Groceey Store Challenge In Ruby
+# Grocery Store Challenge In Ruby
