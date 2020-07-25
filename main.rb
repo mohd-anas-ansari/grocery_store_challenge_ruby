@@ -123,5 +123,8 @@ def calculate_bill bill
   bill.map do |n| 
     total_price += n.price
   end
+
+  puts  "Total price : $#{total_price.round(2)}"
+
 end
 
