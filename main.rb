@@ -100,7 +100,7 @@ def run_test
 end
 
 
-
+# Table Generator
 def generate_bill_in_format bill
   data_for_table = []
   for item in bill do 
@@ -114,5 +114,11 @@ def generate_bill_in_format bill
   puts "\n"
 
   calculate_bill bill
+end
+
+
+#Total
+def calculate_bill bill
+
 end
 
