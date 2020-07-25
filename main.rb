@@ -21,7 +21,17 @@ class Item
 
     discount_on_pair_of = 0
 
-    
+    case @item
+    when "milk"
+
+    when "bread"
+
+
+    when "apple"
+
+    when "banana"
+
+    end
   end
 
 end
