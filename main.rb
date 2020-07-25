@@ -119,6 +119,9 @@ end
 
 #Total
 def calculate_bill bill
-
+  total_price = 0
+  bill.map do |n| 
+    total_price += n.price
+  end
 end
 
