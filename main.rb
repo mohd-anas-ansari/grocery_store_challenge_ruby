@@ -31,7 +31,6 @@ end
 
 
 # Item Class
-
 class Item
   attr_accessor :item, :quantity, :price
 
@@ -40,5 +39,5 @@ class Item
     @quantity = quantity
     @price = calculate_price
   end
-  
+
 end
