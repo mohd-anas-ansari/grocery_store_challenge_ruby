@@ -107,6 +107,6 @@ def generate_bill_in_format bill
     data_for_table << [item.item.capitalize(), item.quantity, "$#{item.price}"]
   end
 
-  
+  table = Terminal::Table.new :headings => ['Item', 'Quantity', 'Price'], :rows => data_for_table
 end
 
