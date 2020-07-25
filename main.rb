@@ -42,13 +42,17 @@ class Item
       $total_price_pre_discount_for_all_items_combined += (@quantity * apple_unit_price)
 
       return apple_unit_price
+
     when "banana"
       $total_price_pre_discount_for_all_items_combined += (@quantity * banana_unit_price)
-      
+
       return banana_unit_price
     end
   end
 
+  def generate_price_after_sale_discount discount_on_pair_of, sale_unit_price, unit_price
+
+  end
 end
 
 
