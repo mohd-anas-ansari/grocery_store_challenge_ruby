@@ -62,9 +62,14 @@ class Item
       return price_after_discount
     end
   end
-
 end
 
+
+# Create Item
+def createItem item, list, bill
+  quantity = list.count(item)
+  bill.push(Item.new(item , quantity))
+end
 
 # Main
 def run_test 
@@ -92,10 +97,8 @@ def run_test
 end
 
 
-# Create Item
-def createItem item, list, bill
-  quantity = list.count(item)
-  bill.push(Item.new(item , quantity))
-end
 
+def generate_bill_in_format bill
+  
+end
 
