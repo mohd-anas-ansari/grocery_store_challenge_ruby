@@ -9,7 +9,18 @@ class Item
   end
 
   def calculate_price
+    milk_sale_unit_price = 2.50
+    milk_unit_price = 3.97
 
+    
+    discount_on_pair_of = 0
+
+    bread_sale_unit_price = 2.00
+    bread_unit_price = 2.17
+
+    apple_unit_price = 0.89
+    
+    banana_unit_price = 0.99
   end
 
 end
