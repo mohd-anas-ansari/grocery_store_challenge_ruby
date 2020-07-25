@@ -109,6 +109,8 @@ def generate_bill_in_format bill
 
   table = Terminal::Table.new :headings => ['Item', 'Quantity', 'Price'], :rows => data_for_table, :style => {:width => 40, :border_x => "-", :border_i => "-",:border_top => false, :border_bottom => false, :border_y => ""}
 
+  puts "\n"
   puts table
+  puts "\n"
 end
 
