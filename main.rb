@@ -117,6 +117,8 @@ def generate_bill_in_format bill
 end
 
 
+$total_price_pre_discount_for_all_items_combined = 0
+
 #Total
 def calculate_bill bill
   total_price = 0
