@@ -112,5 +112,7 @@ def generate_bill_in_format bill
   puts "\n"
   puts table
   puts "\n"
+
+  calculate_bill bill
 end
 
