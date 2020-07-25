@@ -23,7 +23,7 @@ class Item
 
     case @item
     when "milk"
-
+      discount_on_pair_of = 2
     when "bread"
 
 
