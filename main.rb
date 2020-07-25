@@ -8,6 +8,10 @@ class Item
     @price = calculate_price
   end
 
+  def calculate_price
+
+  end
+
 end
 
 
