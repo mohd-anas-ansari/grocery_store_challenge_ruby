@@ -12,15 +12,16 @@ class Item
     milk_sale_unit_price = 2.50
     milk_unit_price = 3.97
 
-    
-    discount_on_pair_of = 0
-
     bread_sale_unit_price = 2.00
     bread_unit_price = 2.17
-
+    
     apple_unit_price = 0.89
     
     banana_unit_price = 0.99
+
+    discount_on_pair_of = 0
+
+    
   end
 
 end
