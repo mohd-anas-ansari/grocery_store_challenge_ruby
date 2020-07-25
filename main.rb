@@ -134,3 +134,5 @@ def calculate_bill bill
 end
 
 
+run_test 
+
