@@ -1,4 +1,7 @@
 # Item Class
+
+require "terminal-table"
+
 class Item
   attr_accessor :item, :quantity, :price
 
@@ -103,5 +106,7 @@ def generate_bill_in_format bill
   for item in bill do 
     data_for_table << [item.item.capitalize(), item.quantity, "$#{item.price}"]
   end
+
+  
 end
 
