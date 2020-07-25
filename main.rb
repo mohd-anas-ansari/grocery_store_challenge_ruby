@@ -12,6 +12,8 @@ class Item
   end
 
   def calculate_price
+
+    #Temporary List
     milk_sale_unit_price = 2.50
     milk_unit_price = 3.97
 
