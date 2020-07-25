@@ -1,4 +1,7 @@
 # Item Class
+
+require "terminal-table"
+
 class Item
   attr_accessor :item, :quantity, :price
 
@@ -62,9 +65,14 @@ class Item
       return price_after_discount
     end
   end
-
 end
 
+
+# Create Item
+def createItem item, list, bill
+  quantity = list.count(item)
+  bill.push(Item.new(item , quantity))
+end
 
 # Main
 def run_test 
@@ -87,13 +95,22 @@ def run_test
   if list_by_user.include? "banana"
     createItem "banana", list_by_user, bill
   end
+
+  generate_bill_in_format(bill)
 end
 
 
-# Create Item
-def createItem item, list, bill
-  quantity = list.count(item)
-  bill.push(Item.new(item , quantity))
-end
 
+def generate_bill_in_format bill
+  data_for_table = []
+  for item in bill do 
+    data_for_table << [item.item.capitalize(), item.quantity, "$#{item.price}"]
+  end
+
+  table = Terminal::Table.new :headings => ['Item', 'Quantity', 'Price'], :rows => data_for_table, :style => {:width => 40, :border_x => "-", :border_i => "-",:border_top => false, :border_bottom => false, :border_y => ""}
+
+  puts "\n"
+  puts table
+  puts "\n"
+end
 
