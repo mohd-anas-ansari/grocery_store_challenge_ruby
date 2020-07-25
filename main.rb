@@ -34,14 +34,18 @@ class Item
       discount_on_pair_of = 3
 
       $total_price_pre_discount_for_all_items_combined += (@quantity * bread_unit_price)
-      
+
       bread_price = generate_price_after_sale_discount(discount_on_pair_of, bread_sale_unit_price, bread_unit_price) 
       return bread_price
 
     when "apple"
+      $total_price_pre_discount_for_all_items_combined += (@quantity * apple_unit_price)
 
+      return apple_unit_price
     when "banana"
-
+      $total_price_pre_discount_for_all_items_combined += (@quantity * banana_unit_price)
+      
+      return banana_unit_price
     end
   end
 
