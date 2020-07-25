@@ -55,8 +55,14 @@ class Item
       price_after_discount = @quantity * unit_price
       return price_after_discount
     end
+
+    if @quantity >= discount_on_pair_of
+      price_after_discount = ((@quantity / discount_on_pair_of) * (sale_unit_price * discount_on_pair_of) ) + (unit_price * (@quantity % discount_on_pair_of))
+
+      return price_after_discount
+    end
   end
-  
+
 end
 
 
