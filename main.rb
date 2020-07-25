@@ -29,9 +29,14 @@ class Item
 
       milk_price = generate_price_after_sale_discount(discount_on_pair_of, milk_sale_unit_price, milk_unit_price)
       return milk_price
-      
-    when "bread"
 
+    when "bread"
+      discount_on_pair_of = 3
+
+      $total_price_pre_discount_for_all_items_combined += (@quantity * bread_unit_price)
+      
+      bread_price = generate_price_after_sale_discount(discount_on_pair_of, bread_sale_unit_price, bread_unit_price) 
+      return bread_price
 
     when "apple"
 
