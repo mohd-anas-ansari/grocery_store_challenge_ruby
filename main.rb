@@ -1,3 +1,5 @@
+
+# Main
 def run_test 
   bill = []
   puts "Please enter all the items purchased separated by a comma"
@@ -21,6 +23,8 @@ def run_test
 end
 
 
-def createItem 
-
+# Create Item
+def createItem item, list, bill
+  quantity = list.count(item)
+  bill.push(Item.new(item , quantity))
 end
