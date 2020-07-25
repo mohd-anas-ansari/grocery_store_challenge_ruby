@@ -130,5 +130,7 @@ def calculate_bill bill
 
   amount_saved = ($total_price_pre_discount_for_all_items_combined - total_price).round(2)
   puts "You saved $#{amount_saved} today." 
+  puts "\n"
 end
+
 
